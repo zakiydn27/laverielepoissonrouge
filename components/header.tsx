@@ -89,12 +89,19 @@ export default function Header() {
         {isOpen && (
           <div className="absolute top-full left-0 right-0 bg-background border-b border-border md:hidden">
             <div className="flex flex-col gap-4 p-4">
-              <a href="#services" onClick={(e) => handleSmoothScroll(e, "#services")} className="text-foreground hover:text-primary transition">Services</a>
-              <a href="#about" onClick={(e) => handleSmoothScroll(e, "#about")} className="text-foreground hover:text-primary transition">À Propos</a>
-              <a href="#contact" onClick={(e) => handleSmoothScroll(e, "#contact")} className="text-foreground hover:text-primary transition">Contact</a>
-              <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:opacity-90 transition w-full">
-                Réserver
-              </button>
+                        <a href="#services" onClick={(e) => handleSmoothScroll(e, "#services")} className="text-foreground hover:text-primary transition">Services</a>
+          <a href="#process-guide" onClick={(e) => handleSmoothScroll(e, "#process-guide")} className="text-foreground hover:text-primary transition">Lavage</a>
+          <a href="#about" onClick={(e) => handleSmoothScroll(e, "#about")} className="text-foreground hover:text-primary transition">À Propos</a>
+          <a href="#opening-hour" onClick={(e) => handleSmoothScroll(e, "#opening-hour")} className="text-foreground hover:text-primary transition">Opening Hours</a>
+          <a href="#contact" onClick={(e) => handleSmoothScroll(e, "#contact")} className="text-foreground hover:text-primary transition">Contact</a>
+
+          <Button
+            onClick={toggleTheme}
+            className="flex items-center gap-2 bg-primary hover:bg-primary/90 transition"
+          >
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            {isDark ? "Light Mode" : "Dark Mode"}
+          </Button>
             </div>
           </div>
         )}
