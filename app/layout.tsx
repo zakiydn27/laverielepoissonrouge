@@ -8,9 +8,9 @@ const _inter = Inter({ subsets: ["latin"] })
 const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Le Poisson Rouge - Laundry Service",
+  title: "Le Poisson Rouge",
   description: "Modern laundry service with professional cleaning solutions",
-  generator: "v0.app",
+  generator: "Next.js",
 }
 
 export default function RootLayout({
